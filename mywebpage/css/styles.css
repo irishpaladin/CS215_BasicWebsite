@@ -13,6 +13,7 @@ h2{
   display:flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 .tab{
   cursor: pointer;
@@ -48,7 +49,7 @@ h2{
 }
 .panel-title{
   font-size:1.5em;
-  font-weight:bold
+  font-weight:bold;
 }
 .radio{
   display:none;
@@ -77,9 +78,12 @@ table, th, td {
   height: 30px;
   width: 100%;
 }
+table{
+  margin-top: 15px;
+}
 
 .evenRow{
-  background-color: #dddddd;
+  background-color: #e7e7e7;
   border:thin dotted #AAAAAA;
 }
 
