@@ -1,0 +1,30 @@
+body{
+    background-color: linen;
+}
+
+h2{
+    font: 'Times New Roman';
+}
+/*not sure if right*/
+#specialp{
+    background-color: #dddddd;
+    border:thin dotted #AAAAAA;
+}
+/*whatever color?*/
+.evenRow{
+    background-color: #dddddd;
+    border:thin dotted #AAAAAA;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+a:hover {
+    color:purple;
+}
