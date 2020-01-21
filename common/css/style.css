@@ -5,7 +5,7 @@
 	height:60px;
 	bottom:40px;
 	right:40px;
-	background-color: rgb(255, 244, 232);
+	background-color:#000;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -16,3 +16,10 @@
     height: 60%;
     margin-top: 20%;
 }
+
+#validator{
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+}
+
