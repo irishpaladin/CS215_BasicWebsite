@@ -3,7 +3,7 @@ body{
 }
 
 h2{
-    font: 'Times New Roman';
+    font-family: "Times New Roman", Times, serif;
 }
 /*not sure if right*/
 #specialp{

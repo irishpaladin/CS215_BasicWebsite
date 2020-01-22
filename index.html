@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<!doctype html> 
 <html xmlns = "http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Home</title>
@@ -7,29 +6,30 @@
 	</head>
 
 	<body>
-		<p style="text-align:center">
-			<img src="images/helloblob.gif" alt="Hello by blob" style="width:128px;height:128px;"/>
-		</p>
-
-		<h1 style="text-align:center"> Welcome to Irish Paladin's website! </h1>
-
-		<p style="text-align:center"> 
-			Irish is a 2nd-year Computer Science student at the University of Regina.
-			<br/>She is passionate about developing apps and is currently having fun learning various fields within her program.
-			<br/>Say hello when you see her. I'm sure she'll be happy.
-		</p>
-
-		<h3 style="text-align:center"> Check out her projects below! </h3>
-		
+		<header>
+			<p class="centertext">
+				<img src="images/helloblob.gif" alt="Hello by blob" style="width:128px;height:128px;"/>
+			</p>
+	
+			<h1 class="centertext"> Welcome to Irish Paladin's website! </h1>
+	
+			<p  class="centertext"> 
+				Irish is a 2nd-year Computer Science student at the University of Regina.
+				<br/>She is passionate about developing apps and is currently having fun learning various fields within her program.
+				<br/>Say hello when you see her. I'm sure she'll be happy.
+			</p>
+	
+			<h3  class="centertext"> Check out her projects below! </h3>
+		</header>
 		<div class="warpper">
 		<input class="radio" id="one" name="group" type="radio" checked="checked" />
 		<input class="radio" id="two" name="group" type="radio"/>
 		<input class="radio" id="three" name="group" type="radio"/>
-		<div class="tabs">
-		<label class="tab" id="one-tab" for="one">Classes</label>
-		<label class="tab" id="two-tab" for="two">CS215 Labs</label>
-		<label class="tab" id="three-tab" for="three">CS315 Labs</label>
-			</div>
+		<nav class="tabs">
+			<label class="tab" id="one-tab" for="one">Classes</label>
+			<label class="tab" id="two-tab" for="two">CS215 Labs</label>
+			<label class="tab" id="three-tab" for="three">CS315 Labs</label>
+		</nav>
 		<div class="panels">
 		<div class="panel" id="one-panel">
 			<div class="panel-title">Classes</div>
@@ -61,13 +61,13 @@
 			<div class="panel-title">CS 215 Lab Exercises</div>
 			<table>
 				<tr class="evenRow">
-				  	<th> <a href="lab1/index.html">Lab 1 - Lab Environment and HTML </a> </th>
+				  	<th> <a href="http://www2.cs.uregina.ca/~srp796/lab1/index.html">Lab 1 - Lab Environment and HTML </a> </th>
 				</tr>
 				<tr>
-				  	<th> <a href="lab2/test_style.html">Lab 2 - CSS Fundamentals </a> </th>
+				  	<th> <a href="http://www2.cs.uregina.ca/~srp796/lab2/test_style.html">Lab 2 - CSS Fundamentals </a> </th>
 				</tr>
 				<tr class="evenRow">
-					<th> <a href="#">Lab 3 - HTML5 and CSS3 </a> </th>
+					<th> <a href="http://www2.cs.uregina.ca/~srp796/lab3/sampleLayout.html">Lab 3 - HTML5 and CSS3 </a> </th>
 				</tr>
 				<tr>
 					<th> <a href="#">Lab 4 - JavaScript Fundmentals </a> </th>
@@ -105,7 +105,14 @@
 				<a href="http://validator.w3.org/check?uri=referer">
 					<img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" />
 				</a>
+			
+			    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+			    	<img style="border:0;width:88px;height:31px"
+				        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+				        alt="Valid CSS!" />
+			    </a>
 			</p>
+    
 		</div>
 		
 	</body>
