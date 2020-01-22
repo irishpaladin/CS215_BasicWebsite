@@ -2,11 +2,19 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Home</title>
-		<link rel = "stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)" href="css/small-device.css" />
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width: 481px)" href="css/large-device.css" />	
 	</head>
 
 	<body>
-		<header>
+		<header class="topnav">
+			<a class="active" href="#home">Home</a>
+			<a href="">About</a>
+			<a href="">Skills</a>
+			<a href="">Contact</a>
+		</header>
+		<section>
 			<p class="centertext">
 				<img src="images/helloblob.gif" alt="Hello by blob" style="width:128px;height:128px;"/>
 			</p>
@@ -20,100 +28,89 @@
 			</p>
 	
 			<h3  class="centertext"> Check out her projects below! </h3>
-		</header>
-		<div class="warpper">
-		<input class="radio" id="one" name="group" type="radio" checked="checked" />
-		<input class="radio" id="two" name="group" type="radio"/>
-		<input class="radio" id="three" name="group" type="radio"/>
-		<nav class="tabs">
-			<label class="tab" id="one-tab" for="one">Classes</label>
-			<label class="tab" id="two-tab" for="two">CS215 Labs</label>
-			<label class="tab" id="three-tab" for="three">CS315 Labs</label>
-		</nav>
-		<div class="panels">
-		<div class="panel" id="one-panel">
-			<div class="panel-title">Classes</div>
-			<ul style="list-style-type:disc;"  >
-				<li><strong>Classes I am currently taking</strong>
-					<ol>
-						<li>CS 215</li>
-						<li>CS 315</li>
-						<li>CS 340</li>
-						<li>Math 221</li>
-					</ol>
-				</li>
+		</section>
+		<section class="warpper">
+			<input class="radio" id="one" name="group" type="radio" checked="checked" />
+			<input class="radio" id="two" name="group" type="radio"/>
+			<input class="radio" id="three" name="group" type="radio"/>
+			<nav class="tabs">
+				<label class="tab" id="one-tab" for="one">Classes</label>
+				<label class="tab" id="two-tab" for="two">CS215 Labs</label>
+				<label class="tab" id="three-tab" for="three">CS315 Labs</label>
+			</nav>
+			<div class="panels">
+			<div class="panel" id="one-panel">
+				<div class="panel-title">Classes</div>
+				<ul style="list-style-type:disc;"  >
+					<li><strong>Classes I am currently taking</strong>
+						<ol>
+							<li>CS 215</li>
+							<li>CS 315</li>
+							<li>CS 340</li>
+							<li>Math 221</li>
+						</ol>
+					</li>
+					
+					<li><br/><strong>CS Classes I have already taken</strong>
+						<ol>
+							<li>CS 110</li>
+							<li>CS 115</li>
+							<li>CS 201</li>
+							<li>CS 210</li>
+							<li>CS 203</li>
+							<li>CS 207</li>
+							<li>CS 490DB</li>
+						</ol>
+					</li>
 				
-				<li><br/><strong>CS Classes I have already taken</strong>
-					<ol>
-						<li>CS 110</li>
-						<li>CS 115</li>
-						<li>CS 201</li>
-						<li>CS 210</li>
-						<li>CS 203</li>
-						<li>CS 207</li>
-						<li>CS 490DB</li>
-					</ol>
-				</li>
-			
-			</ul>
-		</div>
-		<div class="panel" id="two-panel">
-			<div class="panel-title">CS 215 Lab Exercises</div>
-			<table>
-				<tr class="evenRow">
-				  	<th> <a href="http://www2.cs.uregina.ca/~srp796/lab1/index.html">Lab 1 - Lab Environment and HTML </a> </th>
-				</tr>
-				<tr>
-				  	<th> <a href="http://www2.cs.uregina.ca/~srp796/lab2/test_style.html">Lab 2 - CSS Fundamentals </a> </th>
-				</tr>
-				<tr class="evenRow">
-					<th> <a href="http://www2.cs.uregina.ca/~srp796/lab3/sampleLayout.html">Lab 3 - HTML5 and CSS3 </a> </th>
-				</tr>
-				<tr>
-					<th> <a href="#">Lab 4 - JavaScript Fundmentals </a> </th>
-				</tr>
-				<tr class="evenRow">
-					<th> <a href="#">Lab 5</a> </th>
-				</tr>		
-			</table>
-		</div>
-		<div class="panel" id="three-panel">
-			<div class="panel-title">CS 315 Lab Exercises</div>
-			<table>
-				<tr class="evenRow">
-				  	<th> <a href="#">Lab 1 - Getting Started with WebGL </a> </th>
-				</tr>
-				<tr>
-				  	<th> <a href="#">Lab 2 - Points, Primitives and 2D Art </a> </th>
-				</tr>
-				<tr class="evenRow">
-					<th> <a href="#">Lab 3 - 3D Transformations </a> </th>
-				</tr>
-				<tr>
-					<th> <a href="#">Lab 4 - Making a Mesh </a> </th>
-				</tr>
-				<tr class="evenRow">
-					<th> <a href="#">Lab 5</a> </th>
-				</tr>		
-			</table>
-		</div>
-		</div>
-		</div>
+				</ul>
+			</div>
+			<div class="panel" id="two-panel">
+				<div class="panel-title">CS 215 Lab Exercises</div>
+				<table>
+					<tr class="evenRow">
+						<th> <a href="http://www2.cs.uregina.ca/~srp796/lab1/index.html">Lab 1 - Lab Environment and HTML </a> </th>
+					</tr>
+					<tr>
+						<th> <a href="http://www2.cs.uregina.ca/~srp796/lab2/test_style.html">Lab 2 - CSS Fundamentals </a> </th>
+					</tr>
+					<tr class="evenRow">
+						<th> <a href="http://www2.cs.uregina.ca/~srp796/lab3/sampleLayout.html">Lab 3 - HTML5 and CSS3 </a> </th>
+					</tr>
+					<tr>
+						<th> <a href="#">Lab 4 - JavaScript Fundmentals </a> </th>
+					</tr>
+					<tr class="evenRow">
+						<th> <a href="#">Lab 5</a> </th>
+					</tr>		
+				</table>
+			</div>
+			<div class="panel" id="three-panel">
+				<div class="panel-title">CS 315 Lab Exercises</div>
+				<table>
+					<tr class="evenRow">
+						<th> <a href="#">Lab 1 - Getting Started with WebGL </a> </th>
+					</tr>
+					<tr>
+						<th> <a href="#">Lab 2 - Points, Primitives and 2D Art </a> </th>
+					</tr>
+					<tr class="evenRow">
+						<th> <a href="#">Lab 3 - 3D Transformations </a> </th>
+					</tr>
+					<tr>
+						<th> <a href="#">Lab 4 - Making a Mesh </a> </th>
+					</tr>
+					<tr class="evenRow">
+						<th> <a href="#">Lab 5</a> </th>
+					</tr>		
+				</table>
+			</div>
+			</div>
+		</section>
 
-		<div id = "validator">
-			<p>
-				<a href="http://validator.w3.org/check?uri=referer">
-					<img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" />
-				</a>
-			
-			    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-			    	<img style="border:0;width:88px;height:31px"
-				        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-				        alt="Valid CSS!" />
-			    </a>
-			</p>
-    
-		</div>
+		<footer>
+			<p>@ 2020 S.P. All rights reserved.</p>
+		</footer>
 		
 	</body>
 
