@@ -1,0 +1,148 @@
+body {
+    /*Display & Size*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10vw 35vw 4vw;
+    grid-gap: 0;
+    padding: 0;
+    background: #edf0f2;
+    box-shadow: 0px 0px 5px 0px rgba(56,128,135,1);
+
+    /*Font*/
+    font-family: 'Roboto Condensed';
+  }
+  
+  header,
+  footer {
+    grid-column: 1 / span 5;
+  }
+  
+  main {
+    grid-column: 1 / span 3;
+  }
+  
+  aside {
+    grid-column: span 2;
+  }
+  
+  @media (max-width: 700px) {
+    
+    main,
+    aside {
+      grid-column: 1 / span 5;
+    }
+    
+  }
+  
+  /* Demo Specific Styles */
+  body {
+    margin: 0 auto;
+    max-width: 56em;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  header,
+  main,
+  aside,
+  footer {
+    display: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header{
+    height: 10vw;
+    text-align: center;
+  }
+
+  .subtitle{
+    font-weight: lighter;
+    font-size: .9rem;
+    margin-top: 0;
+    letter-spacing: .2em;
+  }
+
+  .title{
+    font-weight:900;
+    font-size: 2.5rem;
+    margin-bottom:0;
+    letter-spacing: .02em;
+  }
+
+  main{
+    background-color: #F6f6f2;
+  }
+
+  aside{
+    background-color: #b8d5d5;
+  }
+  
+  footer {
+    height: 4vw;
+    text-align: center;
+  }
+
+  /*colors*/
+  
+  .blue-main-bg{
+    background-color:  #388087;
+  }
+
+  .white-font{
+    color: #F6f6f2;
+  }
+
+  .blue-secondary{
+    color: #6fb3b8
+  }
+
+  /*Main tags*/
+
+  .circle{
+    border-radius: 50%;
+  }
+
+  .small-image{
+    width:1rem;
+    height: 1rem;
+  }
+
+  main{
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .content{
+    display: relative;
+    margin: 0;
+    width: auto;
+    height: 100%;
+  }
+
+  .show-border{
+    border: 1px solid black;
+  }
+  .booking-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "ROOM Date\/Time";
+  }
+  
+  .content-title{
+    font-size: 1.9em;
+    font-weight: lighter;
+  }
+
+  .ROOM {
+
+   }
+  
+  .Date\/Time { 
+    
+   }
+
+   .booking-container{
+     border-top: 5px solid #badfe7;
+     padding-top: 2em;
+   }

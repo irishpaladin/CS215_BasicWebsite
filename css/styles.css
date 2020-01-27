@@ -5,12 +5,14 @@ body{
   font-family: 'Arimo', sans-serif;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 .warpper{
   display:flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  padding-bottom: 100px;
 }
 .tab{
   cursor: pointer;
@@ -101,7 +103,10 @@ footer{
   height: 50px;
   vertical-align: middle;
   display: flex;
+  position: absolute;
+  bottom:0;
 }
+
 footer p {
   margin: auto;
   vertical-align: center;
@@ -109,7 +114,7 @@ footer p {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
 }
 
 .topnav a {
