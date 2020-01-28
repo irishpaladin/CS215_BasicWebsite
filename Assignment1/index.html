@@ -3,6 +3,7 @@
     <head>
         <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'/>
         <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="css/login-style.css"/>
     </head>
     <body>
         <header class='blue-main-bg'>
@@ -11,27 +12,81 @@
         </header>
 
         <main>
-            <div class="content show-border">
+            <div class="content">
                 <h1 class = "blue-secondary content-title">Today's Booking</h1>
                 <div class="booking-container">
-                    <div class="booking-info">
-                        <div class="room-title blue-secondary show-border">RIC214</div>
-                        <div class="time-schedule show-border">
+                    <div class="booking-info blue-secondary">
+                        <div class="room-title "><h2>RIC 214</h2></div>
+                        <div class="time-schedule">
                             <table>
                                 <tr>
-                                <th>9:00AM - 12:00PM</th>
-                                <th><img class = "small-image circle" src="images/anon.jpg"/></th>
-                                <th>jane007</th>
+                                    <th class="right-align-text time">9:00AM - 12:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">jane007</th>
                                 </tr>
                                 <tr>
-                                    <th>9:00AM - 12:00PM</th>
+                                    <th class="right-align-text time">1:00PM - 2:00PM</th>
                                     <th><img class = "small-image circle" src="images/anon.jpg"/></th>
-                                    <th>jane007</th>
+                                    <th class="left-align-text username">anon01</th>
                                 </tr>
                                 <tr>
-                                    <th>9:00AM - 12:00PM</th>
+                                    <th class="right-align-text time" >4:00AM - 7:00PM</th>
                                     <th><img class = "small-image circle" src="images/anon.jpg"/></th>
-                                    <th>jane007</th>
+                                    <th class="left-align-text username">john8</th>
+                                </tr>
+                            </table>                  
+                        </div>
+                    </div>
+                    <div class="booking-info blue-secondary">
+                        <div class="room-title "><h2>RIC 315</h2></div>
+                        <div class="time-schedule">
+                            <table>
+                                <tr>
+                                    <th class="right-align-text time">9:00AM - 12:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">jane007</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time">1:00PM - 2:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">anon01</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time">1:00PM - 2:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">anon01</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time" >4:00AM - 7:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">john8</th>
+                                </tr>
+                            </table>                  
+                        </div>
+                    </div>
+                    <div class="booking-info blue-secondary">
+                        <div class="room-title "><h2>RIC 330</h2></div>
+                        <div class="time-schedule">
+                            <table>
+                                <tr>
+                                    <th class="right-align-text time">9:00AM - 12:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">jane007</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time">1:00PM - 2:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">anon01</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time">1:00PM - 2:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">anon01</th>
+                                </tr>
+                                <tr>
+                                    <th class="right-align-text time" >4:00AM - 7:00PM</th>
+                                    <th><img class = "small-image circle" src="images/anon.jpg"/></th>
+                                    <th class="left-align-text username">john8</th>
                                 </tr>
                             </table>                  
                         </div>
@@ -39,9 +94,35 @@
                 </div>
             </div>
         </main>
+
         <aside>
-            Sidebar
+            <div class="loginpanel" >
+                <h1 class = "blue-secondary content-title">Member Login</h1>
+                <div class="login-container">
+                    <div class="txt">
+                        <input id="user" class="blue-secondary" type="text" placeholder="Username" />
+                    </div>
+                    <div class="txt">
+                        <input id="pwd" class="blue-secondary"type="password" placeholder="Password" />
+                    </div>
+                    <div class="buttons txt">
+                        <input type="button" class="blue-button white-font" value="Login" />
+                    </div>
+                    
+                    
+                </div>
+                <div class="login-container">
+                    
+                    <div class="buttons txt">
+                    <input type="button" class="blue-secondary" value="New to us? Sign Up" />
+                    
+                    </div>
+                </div>
+              </div>
+              
+              <span class="resp-info"></span>
         </aside>
+
         <footer class="white-font blue-main-bg">
             <p>@All rights reserved</p>
         </footer>

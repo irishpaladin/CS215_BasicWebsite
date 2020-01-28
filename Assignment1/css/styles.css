@@ -1,8 +1,10 @@
+/*Login Form template is taken from ColorLib*/
+
 body {
     /*Display & Size*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 10vw 35vw 4vw;
+    grid-template-rows: 10vw auto 4vw;
     grid-gap: 0;
     padding: 0;
     background: #edf0f2;
@@ -94,7 +96,7 @@ body {
   }
 
   .blue-secondary{
-    color: #6fb3b8
+    color: #388087;
   }
 
   /*Main tags*/
@@ -117,16 +119,21 @@ body {
     margin: 0;
     width: auto;
     height: 100%;
+    padding-bottom: 1.5rem;
   }
 
   .show-border{
     border: 1px solid black;
   }
+  
   .booking-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "ROOM Date\/Time";
+    padding: 1em;
+    background-color:rgba(111, 179, 184,0.5);
+    margin-bottom: 1rem;
   }
   
   .content-title{
@@ -134,15 +141,34 @@ body {
     font-weight: lighter;
   }
 
-  .ROOM {
+  .room-title h2{
+    margin: 10px;
+    font-weight: lighter;
+  }
 
-   }
-  
-  .Date\/Time { 
-    
-   }
 
    .booking-container{
      border-top: 5px solid #badfe7;
-     padding-top: 2em;
+     padding-top: 1.2em;
+   }
+
+   .time-schedule table tr th{
+     font-weight: lighter;
+     letter-spacing: .1em;
+   }
+
+   .time{
+    padding-right: .9em;
+   }
+
+   .right-align-text{
+     text-align: right;
+   }
+
+   .left-align-text{
+     text-align: left;
+   }
+
+   .username{
+     padding-left: .2em;
    }
