@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title>SignUp Page</title>
+<link rel = "stylesheet" type="text/css" href="../common/css/style.css"/>
+<script src="validate-signup.js"> </script>
+</head>
+
+<body>
+ 
+
+<h1>Sign Up Page</h1>
+
+
+
+<form name="signup" onsubmit="return validateForm()" method="post">
+    <input type="text" name="email" placeholder="Email" /><br/> 
+    <input type="text" name="username" placeholder= "Username" /><br/> 
+    <input type="password" name="password" placeholder="Password"/><br/> 
+    <input type="password" name="confirmpassword" placeholder="Confirm Password"/><br/>
+    <input type="submit" value="Submit"/>
+</form> 
+
+<p><a href="http://www2.cs.uregina.ca/~srp796/">Back to homepage</a></p>
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+  </p>
+  <p>
+			<a href="http://www2.cs.uregina.ca/~srp796/" class="float">
+				<img src="../common/images/back2.png" alt="back button"/>
+			</a>
+		</p>
+</body>
+
+</html>
