@@ -330,3 +330,11 @@ body {
       font-size: .7rem;
       letter-spacing: normal;
   }
+
+  .div-header h1, .div-header div, .div-header img{
+    display: inline-block;
+  }
+
+  .table-header{
+    width:100%;
+  }
