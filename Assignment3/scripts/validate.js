@@ -13,7 +13,6 @@ function ValidateEmail(event){
 		return;
 	}
 	if (!emailRegEx.test(email.value)){
-		console.log("email-if");
 		var warning_text = document.createTextNode('Please enter email in this format: username@somewhere.sth');
 		email.nextElementSibling.appendChild(warning_text);
 		email.classList.add("has-error");
@@ -110,7 +109,7 @@ function ValidateUsername(event){
 // adds class to the element if there's error
 function AddErrorMessage(element, message){
 	if(message!=""){
-		element.nextElementSibling.innerHTML=message;
+		element.parentElement.getElementsByClassName("error-message")[0].innerHTML = message;
 		element.classList.add("has-error");
 	}
 }
@@ -119,25 +118,122 @@ function AddErrorMessage(element, message){
 // Should be called every event listener
 function WarningRemove(element){
 	element.classList.remove("has-error");
-	element.nextElementSibling.innerHTML="";
+	//element.nextElementSibling.innerHTML="";
+	element.parentElement.getElementsByClassName("error-message")[0].innerHTML="";
 }
 
 // Event handler for submit in signup and signin
 function ValidateSubmit(event){
-	console.log("here");
 	var parent = event.currentTarget.parentElement.parentElement;
 	var inputs = parent.getElementsByTagName("input");
 
 	for(var i =0; i<inputs.length;i++){
 		if(inputs[i].value==""){
-			AddErrorMessage(inputs[i], "This field should not be empty");
+			if(inputs[i].id =="date-booking"){
+				AddErrorMessage(inputs[i], "Invalid date format");
+			}
+			else AddErrorMessage(inputs[i], "This field should not be empty");
 		}
 	}
+
+	var textareas = parent.getElementsByTagName("textarea");
+	for(var i =0; i<textareas.length;i++){
+		if(textareas[i].value==""){
+			//AddErrorMessage(textareas[i], "This field should not be empty");
+			var counter = textareas[i].nextElementSibling;
+			counter.classList.add("red-text");	
+			textareas[i].classList.add("has-error");
+			var limit = 0;
+			if(textareas[i].id == "description-booking"){
+				limit = 50;
+			}
+			if(textareas[i].id == "edit-note"){
+				limit = 500;
+			}
+			counter.innerHTML= "0/" + limit + " This field should not be empty";
+		}
+	}
+
 	var hasError = parent.getElementsByClassName("has-error").length;
 
-	console.log(hasError);
+	
 	// If all fields are valid
 	if(hasError==0){
+		GetValues(parent);
 		window.location.href = 'room-booking-management.html';
+	}
+}
+
+
+function GetValues(parent){
+	var inputchild = parent.getElementsByTagName("input");
+	for(var i=0;i<inputchild.length-1;i++){//last child is the button
+		console.log("id: " + inputchild[i].id + " || value: " + inputchild[i].value);
+	}
+	var selectchild = parent.getElementsByTagName("select");
+	for(var i=0;i<selectchild.length;i++){
+		console.log("id: " + selectchild[i].id + " || value: " + selectchild[i].value);
+	}
+	var textareachild = parent.getElementsByTagName("textarea");
+	for(var i=0;i<textareachild.length;i++){
+		console.log("id: " + textareachild[i].id + " || value: " + textareachild[i].value);
+	}
+}
+
+
+function DynamicCharacterCounter(event){
+	var element = event.currentTarget;
+	WarningRemove(element);
+
+	var counter = document.getElementsByClassName("character-counter-message")[0];
+	var charLength = element.value.length;
+	var limit = 0;
+
+	if(element.id == "description-booking"){
+		limit = 50;
+	}
+	if(element.id == "edit-note"){
+		limit = 500;
+	}
+	
+	var error="";
+	if(charLength>limit){
+		error = " You have exceeded the maximum number of characters";
+		counter.classList.add("red-text");	
+		element.classList.add("has-error");
+	}
+	else if(charLength == 0){
+		error = " This field should not be empty";
+		counter.classList.add("red-text");	
+		element.classList.add("has-error");
+	}
+	else{
+		counter.classList.remove("red-text");
+		element.classList.remove("has-error");
+	}
+
+	counter.innerHTML=charLength + "/" + limit + error;
+}
+
+function ValidateDate(event){
+	var element = event.currentTarget;
+	WarningRemove(element);
+	if(element.value==""){
+		AddErrorMessage(element, "Invalid date format");
+	}
+}
+
+function ValidateTime(event){
+	var end_time = document.getElementById("end-time-booking");
+	var start_time = document.getElementById("start-time-booking"); 
+	WarningRemove(end_time);
+
+	if(start_time.value>=end_time.value){
+		AddErrorMessage(end_time,"End time should be later that start time");
+		end_time.style.borderColor = "red";
+		start_time.style.borderColor = "red";
+	}else{
+		end_time.style.borderColor = "#388087";
+		start_time.style.borderColor = "#388087";
 	}
 }
