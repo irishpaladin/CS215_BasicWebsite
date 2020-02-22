@@ -185,8 +185,24 @@ body {
     margin-block-end: 0.67em;
 }
 
+.error-message{
+  margin: 0;
+  padding: .25rem;
+  color: rgb(255, 0, 0);
+  font-size: 0.7rem;
+  text-align: left;
+
+}
+
+.has-error{
+  border: 0.5px solid red;
+  border-color: red;
+}
+.has-error:focus{
+  outline: none;
+}
+
 .txt{
-    height: 2rem;
     width: 100%;
     background-color: #b8d5d5;
     padding:0;
@@ -194,10 +210,10 @@ body {
 }
 
 .txt input{
-    height: 100%;
+    height: 2rem;
     width: 100%;
-    padding:0;
-    border:0;
+    border-width:0.5px;
+    border-style: solid;
     font-family: 'Roboto Condensed';
     background: #F6f6f2;
     padding: 1px;
@@ -205,8 +221,13 @@ body {
     box-sizing: border-box;
 }
 
+.txt input:focus{
+  outline-color: #388087;
+}
+
 .txt .blue-button{
     background: #388087;
+    border-color: #388087;
 }
 
 .form-image{
@@ -338,3 +359,5 @@ body {
   .table-header{
     width:100%;
   }
+
+  
