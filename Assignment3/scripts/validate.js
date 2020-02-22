@@ -228,7 +228,7 @@ function ValidateTime(event){
 	var start_time = document.getElementById("start-time-booking"); 
 	WarningRemove(end_time);
 
-	if(start_time.value>=end_time.value){
+	if(parseInt(start_time.value,10)>=parseInt(end_time.value,10)){
 		AddErrorMessage(end_time,"End time should be later that start time");
 		end_time.style.borderColor = "red";
 		start_time.style.borderColor = "red";
