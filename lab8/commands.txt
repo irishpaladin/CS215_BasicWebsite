@@ -1,0 +1,76 @@
+
+mysql> use srp796
+
+mysql> source students.sql
+
+mysql> describe students;
+
+mysql> select * from students;
+
+mysql> update students set email = "alabba200@cs.uregina.ca" where student_ID = 200266200;
+
+mysql> select * from students;
+
+mysql> update students set middle_name="", last_name="Xu" where student_ID = 200266210;
+
+mysql> select * from students;
+
+mysql> Update students
+    -> set course_Description = "Web and Database Programming"
+    -> where course_Name = "CS215";
+
+mysql> select * from students;
+
+mysql> select * from students where course_Name = "CS215";
+
+mysql> delete from students where course_name = "CS000";
+
+mysql> select * from students;
+
+mysql> create table Student_Info(
+    -> student_ID INT NOT NULL,
+    -> first_name varchar(255) not null,
+    -> middle_name varchar(255),
+    -> last_name varchar(255),
+    -> email varchar(255),
+    -> primary key (student_ID)
+    -> );
+
+mysql> describe Student_Info;
+
+mysql> create table Courses(
+    -> course_name varchar(255) NOT NULL,
+    -> course_description varchar(255),
+    -> primary key (course_name)
+    -> );
+
+
+mysql> describe Courses;
+
+mysql> create table Marks(
+    -> student_ID int not null,
+    -> course_name varchar(255) not null,
+    -> marks int,
+    -> foreign key (student_ID) references Student_Info (student_ID),
+    -> foreign key (course_name) references Courses (course_name)
+    -> );
+
+mysql> describe Marks;
+
+mysql> insert into Student_Info (student_id,first_name,middle_name,last_name, email)
+	-> select distinct student_ID, first_name, middle_name, last_name, email from students;
+
+mysql> select * from Student_Info;	
+	
+mysql> insert into Courses (course_name, course_description)
+	-> select distinct course_name, course_description from students;
+	
+mysql> select * from Courses;
+	
+mysql> insert into Marks (student_ID, course_name, marks)
+	-> select student_id, course_name, marks from students;
+
+mysql> select * from Marks;
+
+
+
